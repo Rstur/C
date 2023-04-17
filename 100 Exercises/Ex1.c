@@ -27,3 +27,12 @@ int fun(float score[], int m, float below[])
     // 返回低于平均分的人数
     return cnt;
 }
+main()
+{
+    int i, n, below[9];
+    int score[9] = {10, 20, 30, 40, 50, 60, 70, 80, 90};
+    n = fun(score, 9, below);
+    printf("\nBelow the average score are :");
+    for (i = 0; i < n; i++)
+        printf("%d ", below[i]);
+}
