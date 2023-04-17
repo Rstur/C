@@ -2,6 +2,8 @@
 请编写函数void fun(int x,int pp[],int *n),它的功能是：
 求出能整除x且不是偶数的各整数，并按从小到大的顺序放在pp所指的数组中，这些除数的个数通过形参n返回
 */
+#include <stdio.h>
+#include <string.h>
 
 void fun(int x, int pp[], int *n)
 {
@@ -9,27 +11,22 @@ void fun(int x, int pp[], int *n)
 
     *n = 0;
 
-    for (i = 1; i <= x; i++)
+    for (i = 1; i <= x / 3; i += 2)
     {
-        if (i % x == 0 && i % 2 != 0)
+        if (x % i == 0 && i % 2 != 0)
         {
             pp[*n] = i;
             (*n)++;
         }
     }
+}
 
-    // 对pp数组进行从小到大的排序
-    int j, temp;
-    for (i = 0; i < (*n) - 1; i++)
-    {
-        for (j = i + 1; j < (*n); j++)
-        {
-            if (pp[i] > pp[j])
-            {
-                temp = pp[i];
-                pp[i] = pp[j];
-                pp[j] = temp;
-            }
-        }
-    }
+int main()
+{
+    int x, aa[1000], n, i;
+    printf("Input number:");
+    scanf("%d", &x);
+    fun(x, aa, &n);
+    for (i = 0; i < n; i++)
+        printf(" %d", aa[i]);
 }

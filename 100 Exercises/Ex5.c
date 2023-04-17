@@ -48,6 +48,4 @@ int main()
     {
         printf("%d ", xx[i]);
     }
-    printf("\n");
-    return 0;
 }
