@@ -4,6 +4,7 @@
 
 #include <string.h>
 #include <stdio.h>
+
 void fun(char *tt, int pp[])
 {
     int i, len;
