@@ -10,7 +10,7 @@
 */
 #include <stdio.h>
 #include <math.h>
-#define ERR 0.00001
+#define ERR 0.000001
 
 float fun()
 {
