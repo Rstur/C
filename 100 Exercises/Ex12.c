@@ -6,21 +6,21 @@
 #include <stdio.h>
 #define N 4
 
-float fun(int a[][N])
+float fun(int a[][N], int n)
 {
-    int i, j, k, s = 0;
-    for (i = 0; i < N; i++)
+    int i, j, k = 0, s = 0;
+    for (i = 0; i < n; i++)
     {
-        for (j = 0; j < N; j++)
+        for (j = 0; j < n; j++)
         {
-            if (i == 0 || i == N - 1 || j == 0 || j == N - 1)
+            if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
             {
-                s = s + a[i][j];
+                s += a[i][j];
                 k++;
-            }
+                        }
         }
-        return s / k;
     }
+    return s / k;
 }
 
 int main(void)
@@ -42,7 +42,7 @@ int main(void)
         }
         printf("\n");
     }
-    s = fun(a);
+    s = fun(a, N);
     printf("%d", s);
 
     return 0;
