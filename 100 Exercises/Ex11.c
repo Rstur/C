@@ -14,7 +14,10 @@ void fun(int a[][N])
     {
         for (j = 0; j < N; j++)
         {
-            a[i][j] = 0;
+            if (j <= i)
+            {
+                a[i][j] = 0;
+            }
         }
     }
 }
