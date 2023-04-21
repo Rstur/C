@@ -6,23 +6,37 @@
 #include <stdio.h>
 #include <string.h>
 
-void fun(char *str1)
+char *fun(char *str1, char *str2)
 {
-    int i = 0;
-    printf("%d", str1[0]);
+    int len1 = 0, len2 = 0;
+    while (str1[len1] != '\0')
+    {
+        len1++;
+    }
+    while (str2[len2] != '\0')
+    {
+        len2++;
+    }
+    if (len1 >= len2)
+    {
+        return str1;
+    }
+    else
+    {
+        return str2;
+    }
 }
 
 int main(void)
 {
-    char str1[4];
-    // char str2[];
+    char str1[20];
+    char str2[20];
     printf("Enter first string:\n");
     scanf("%s", str1);
-    printf("%s\n", str1);
-    // printf("Enter second string:\n");
-    // scanf("%s", str2);
-    fun(str1);
-    // printf("%d", fun(str1, str2));
+    printf("Enter second string:\n");
+    scanf("%s", str2);
+
+    printf("The longest string is %s ", fun(str1, str2));
 
     return 0;
 }
