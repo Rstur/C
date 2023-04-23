@@ -6,25 +6,22 @@
 #include <stdio.h>
 #include <string.h>
 
+int my_strlen(char *str)
+{
+    char *p = str;
+
+    while (*p != '\0')
+    {
+        p += 1;
+    }
+    return p - str;
+}
+
 char *fun(char *str1, char *str2)
 {
-    int len1 = 0, len2 = 0;
-    while (str1[len1] != '\0')
-    {
-        len1++;
-    }
-    while (str2[len2] != '\0')
-    {
-        len2++;
-    }
-    if (len1 >= len2)
-    {
-        return str1;
-    }
-    else
-    {
-        return str2;
-    }
+    int len1 = my_strlen(str1);
+    int len2 = my_strlen(str2);
+    return len1 >= len2 ? str1 : str2;
 }
 
 int main(void)
