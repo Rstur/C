@@ -6,19 +6,30 @@
 #include <stdio.h>
 #include <string.h>
 
-int fun()
+int fun(int *x, int *max, int *index)
 {
+    for (int i = 0; i < 8; i++)
+    {
+        if (x[i] > x[i + 1])
+        {
+            *max = x[i];
+            *index = i;
+        }
+    }
 }
 
 int main(void)
 {
-    int x[8] = {20,
-                30,
-                40,
-                50,
-                60,
-                70,
-                90,
-                10};
-    int n = strlen(x)
+    int x[8];
+    int max = 0;
+    int index = 0;
+    printf("Enter some numbers:");
+    for (int i = 0; i < 8; i++)
+    {
+        scanf("%d", &x[i]);
+    }
+    fun(x, &max, &index);
+    printf("Max is %d,position is %d", max, index);
+
+    return 0;
 }
