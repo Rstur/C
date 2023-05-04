@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int fun(char *s, char *t)
+int fun(char* s, char* t)
 {
     int i, j = 0;
     int len = strlen(s);

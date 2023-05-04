@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void fun(int x, int pp[], int *n)
+void fun(int x, int pp[], int* n)
 {
     int i;
 
