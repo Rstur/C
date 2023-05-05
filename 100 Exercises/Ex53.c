@@ -6,20 +6,15 @@
 
 void fun();
 
+void fun2();
+
 int main(void)
 {
     int a[3][3] = { {1,2,3},{4,5,6},{7,8,9} };
     int b[3][3];
     int i, j;
     printf("A =\n");
-    for (i = 0;i < 3;i++)
-    {
-        for (j = 0;j < 3;j++)
-        {
-            printf("%2d ", a[i][j]);
-        }
-        printf("\n");
-    }
+    fun2(a);
     printf("A' =\n");
     for (i = 0;i < 3;i++)
     {
@@ -32,15 +27,7 @@ int main(void)
     fun(a, b);
 
     printf("B =\n");
-    for (i = 0;i < 3;i++)
-    {
-        for (j = 0;j < 3;j++)
-        {
-            printf("%2d ", b[i][j]);
-        }
-        printf("\n");
-    }
-
+    fun2(b);
     return 0;
 }
 
@@ -53,5 +40,18 @@ void fun(int a[3][3], int b[3][3])
         {
             b[i][j] = a[i][j] + a[j][i];
         }
+    }
+}
+
+void fun2(int n[3][3])
+{
+    int i, j = 0;
+    for (i = 0;i < 3;i++)
+    {
+        for (j = 0;j < 3;j++)
+        {
+            printf("%2d ", n[i][j]);
+        }
+        printf("\n");
     }
 }
