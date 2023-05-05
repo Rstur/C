@@ -18,7 +18,7 @@ int main(void)
     struct student s[5] = { {"a",80},{"b",60},{"c",90},{"d",70},{"e",60} };
     struct student b[5];
     int k = 0;
-    fun(s, &b, &k);
+    fun(s, b, &k);
     printf("\n%d", k);
     for (int i = 0; i < k; i++)
     {
