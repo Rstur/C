@@ -13,7 +13,7 @@ unsigned fun(unsigned w)
     {
         p = t % 10;
         s += p * s1;
-        s1 = s1 * 10;
+        s1 *= 10;
         t = t / 10;
     }
     return s;

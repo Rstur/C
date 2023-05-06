@@ -11,15 +11,13 @@ void fun(int tt[M][N], int pp[N])
     int min, i = 0, j = 0;
     for (i = 0; i < M; i++)
     {
-        for (j = 0; j < N; j++)
+        min = tt[i][0];
+        for (j = 1; j < N; j++)
         {
-            if (tt[i][j] > tt[i][j + 1])
+            if (tt[i][j] < min)
             {
-                min = tt[i][j + 1];
-                tt[i][j + 1] = tt[i][j];
-            }
-            else
                 min = tt[i][j];
+            }
         }
         pp[i] = min;
     }
@@ -27,7 +25,7 @@ void fun(int tt[M][N], int pp[N])
 
 int main(void)
 {
-    int tt[M][N] = {0}, n = 0, i = 0, j = 0;
+    int tt[M][N] = { 0 }, n = 0, i = 0, j = 0;
     int pp[N];
     for (i = 0; i < M; i++)
     {
@@ -45,4 +43,10 @@ int main(void)
         printf("\n");
     }
     fun(tt, pp);
+    for (i = 0;i < N;i++)
+    {
+        printf("%d", pp[i]);
+    }
+
+    return 0;
 }

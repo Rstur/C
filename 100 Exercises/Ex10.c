@@ -19,7 +19,7 @@ float fun()
     {
         x0 = x1;
         x1 = cos(x0);
-    } while (fabs(x0 - x1) >= ERR);
+    } while (fabs(x0 - x1) >= ERR);//fabs()绝对值
     return x1;
 }
 

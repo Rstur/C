@@ -5,7 +5,7 @@
 #include <stdio.h>
 #define MAX 100
 
-int fun(int lim, int aa[MAX])
+int fun(int lim, int* aa)
 {
     int count = 0, i, j;
     for (i = 2; i < lim; i++)
@@ -34,7 +34,7 @@ int main(void)
     printf("%d\n", count);
     for (int i = 0; i < count; i++)
     {
-        printf("%2d", aa[i]);
+        printf("%2d ", aa[i]);
     }
     return 0;
 }

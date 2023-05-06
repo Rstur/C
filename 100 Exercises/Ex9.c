@@ -14,7 +14,7 @@ int fac(int i)
 int fun(int m, int n)
 {
     int p;
-    p = fac(m) / fac(n) * fac(m - n);
+    p = fac(m) / fac(n) * fac(m - n);//fac()阶乘
 
     return p;
 }

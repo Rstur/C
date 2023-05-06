@@ -6,7 +6,7 @@
 #include <stdio.h>
 #define N 4
 
-float fun(int a[][N], int n)
+float fun(int(*a)[N], int n)
 {
     int i, j, k = 0, s = 0;
     for (i = 0; i < n; i++)
@@ -17,7 +17,7 @@ float fun(int a[][N], int n)
             {
                 s += a[i][j];
                 k++;
-                        }
+            }
         }
     }
     return s / k;
@@ -25,7 +25,7 @@ float fun(int a[][N], int n)
 
 int main(void)
 {
-    int a[N][N] = {0}, n = 0, i = 0, j = 0;
+    int a[N][N] = { 0 }, n = 0, i = 0, j = 0;
     int s;
     for (i = 0; i < N; i++)
     {

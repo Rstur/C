@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int fun(char str[100])
+int fun(char* str)
 {
     int i, temp = 0;
     int len;
@@ -26,7 +26,7 @@ int fun(char str[100])
 int main(void)
 {
     char str[100];
-    printf("输入字符串:\n");
+    printf("Enter a string:\n");
     scanf("%s", str);
     if (fun(str))
     {

@@ -4,11 +4,11 @@
 
 #include <stdio.h>
 
-int fun(int m, int a[])
+int fun(int* m, int* a)
 {
     int i;
     int n = 0;
-    for (i = 0; i <= m; i++)
+    for (i = 0; i <= *m; i++)
     {
         if (i % 7 == 0 || i % 11 == 0)
         {
@@ -25,7 +25,7 @@ int main(void)
     int a[100];
     printf("Enter a number:\n");
     scanf("%d", &m);
-    int n = fun(m, a);
+    int n = fun(&m, a);
     for (int i = 0; i < n; i++)
     {
         printf("%3d", a[i]);

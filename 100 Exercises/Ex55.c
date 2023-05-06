@@ -21,7 +21,6 @@ int main(void)
         printf("\n");
     }
     printf("\n%d", fun(a));
-
 }
 
 int fun(int a[M][N])
@@ -43,5 +42,4 @@ int fun(int a[M][N])
         printf("%d", b[i]);
     }
     return t;
-
 }

@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void fun(char *s)
+void fun(char* s)
 {
     int len = strlen(s);
     int i;
@@ -16,6 +16,7 @@ void fun(char *s)
         s[len - i - 1] = temp;
     }
 }
+
 int main(void)
 {
     char s[50];
