@@ -6,21 +6,33 @@
 #include <stdio.h>
 #define N 4
 
-float fun(int(*a)[N], int n)
+float fun(int a[][N], int n)
 {
+    printf("@@@2:%d\n", a);
+
     int i, j, k = 0, s = 0;
     for (i = 0; i < n; i++)
     {
-        for (j = 0; j < n; j++)
-        {
-            if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
-            {
+
+        // for (j = 0; j < n; j++)
+        // {
+        //     if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
+        //     {
+        //         s += a[i][j];
+        //         k++;
+        //     }
+        // }
+
+        if (i == 0 || i == n - 1) {
+            for (j = 0; j < n; j += 1) {
                 s += a[i][j];
-                k++;
             }
         }
+        else {
+            s += a[i][0] + a[i][n - 1];
+        }
     }
-    return s / k;
+    return s / (4 * n - 4);
 }
 
 int main(void)
@@ -42,6 +54,8 @@ int main(void)
         }
         printf("\n");
     }
+
+    printf("@@@1:%d\n", a);
     s = fun(a, N);
     printf("%d", s);
 
