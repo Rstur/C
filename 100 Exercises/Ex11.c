@@ -12,19 +12,16 @@ void fun(int a[][N])
     int i = 0, j = 0;
     for (i = 0; i < N; i++)
     {
-        for (j = 0; j < N; j++)
+        for (j = 0; j <= i; j++)
         {
-            if (j <= i)
-            {
-                a[i][j] = 0;
-            }
+            a[i][j] = 0;
         }
     }
 }
 
 int main(void)
 {
-    int a[N][N] = {0}, n = 0, i = 0, j = 0;
+    int a[N][N] = { 0 }, n = 0, i = 0, j = 0;
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < N; j++)
