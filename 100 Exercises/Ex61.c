@@ -12,7 +12,7 @@ void fun();
 
 int main(void)
 {
-    int a[N] = { 0 };
+    int a[N];
     for (int i = 0; i < N; i++)
     {
         a[i] = rand() % 120;
