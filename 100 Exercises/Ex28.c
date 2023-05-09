@@ -4,13 +4,12 @@
 */
 
 #include <stdio.h>
-#include <string.h>
 
-int fun(int *x, int *max, int *index)
+void fun(int* x, int* max, int* index)
 {
     for (int i = 0; i < 8; i++)
     {
-        if (x[i] > x[i + 1])
+        if (x[i] > *max)
         {
             *max = x[i];
             *index = i;
