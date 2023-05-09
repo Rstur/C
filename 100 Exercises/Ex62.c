@@ -11,7 +11,7 @@ int main(void)
 {
     char str[100];
     printf("Enter a string:");
-    fgets(str, 100, stdin);
+    gets(str);
 
     int count = fun(str);
     printf("The number of words in string is %d", count);
