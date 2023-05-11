@@ -1,0 +1,22 @@
+/*
+请编写函数fun，其功能使：将两个两位正整数a b合并形成一个整数放在c中。
+合并的方式使：将a数的十位和个位数依次放在c数的百位和个位上，b数的十位和个位数依次放在c数的千位和十位上。
+*/
+
+#include<stdio.h>
+
+int fun();
+
+int main(void)
+{
+    int a = 12;
+    int b = 34;
+
+    printf("%d", fun(a, b));
+}
+
+int fun(int a, int b)
+{
+    int c = (a % 10) + (b - b % 10) + (a / 10 * 100) + (b % 10 * 1000);
+    return c;
+}
