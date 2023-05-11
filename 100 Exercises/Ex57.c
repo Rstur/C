@@ -28,21 +28,21 @@ int main(void)
     printf("Enter the hightest score: ");
     scanf("%d", &h);
 
-    int count = fun(s, b, l, h);
+    int count = fun(s, b, &l, &h);
     printf("Student's score between %d and %d are :\n", l, h);
     for (int i = 0; i < count; i++)
     {
         printf("ID:%d,Score:%d\n", b[i].id, b[i].score);
     }
-    printf("Count:%d", fun(s, b, l, h));
+    printf("Count:%d", count);
 }
 
-int fun(struct student s[], struct student b[], int l, int h)
+int fun(struct student s[], struct student b[], int* l, int* h)
 {
     int count = 0;
     for (int i = 0; i < N; i++)
     {
-        if (s[i].score >= l && s[i].score <= h)
+        if (s[i].score >= *l && s[i].score <= *h)
         {
             b[count] = s[i];
             count++;

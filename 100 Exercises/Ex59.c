@@ -11,21 +11,21 @@ void fun();
 int main(void)
 {
     char str[][N] = { "hello","world","are","you","ok?","no" };
-    int n = 0;
+    int m = 0;
 
     printf("Enter a number:\n");
-    scanf("%d", &n);
+    scanf("%d", &m);
     char str2[N];
-    fun(str, str2, n);
+    fun(str, str2, &m);
     printf("%s", str2);
 
     return 0;
 }
 
-void fun(char str[][N], char str2[], int n)
+void fun(char str[][N], char str2[], int* m)
 {
     int count = 0;
-    for (int i = 0;i < n;i++)
+    for (int i = 0;i < *m;i++)
     {
         for (int j = 0;j < strlen(str[i]);j++)
             str2[count++] = str[i][j];
