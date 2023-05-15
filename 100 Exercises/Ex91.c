@@ -12,6 +12,8 @@ int main(void)
     int b = 34;
 
     printf("%d", fun(a, b));
+
+    return 0;
 }
 
 int fun(int a, int b)

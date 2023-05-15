@@ -22,7 +22,7 @@ char fun(char* ch, char* str)
     int i, j;
     for (i = j = 0;ch[i] != '\0';i++)
     {
-        if (i % 2 == 1 || ch[i] % 2 == 0)
+        if (ch[i] % 2 == 0) //ASCII值为奇数的字符
         {
             str[j++] = ch[i];
         }

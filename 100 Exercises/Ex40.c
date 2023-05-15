@@ -8,24 +8,32 @@
 
 void fun(char* str, int m)
 {
-    char ch;
-    int i, j;
-    for (i = 1; i <= m; i++)
+    char ch[7];
+    char* p = str;
+    int j = 0;
+    for (int i = 0; i <= m; i++)
     {
-        ch = str[0];
-        for (j = 1; str[j] != '\0'; j++)
-        {
-            str[j - 1] = str[j];
-        }
-        str[j - 1] = ch;
+        ch[i] = *p;
+        p++;//定位第m+1个字符
     }
-    printf("%s", str);
+    for (int i = m + 1; i < 7; i++)
+    {
+        *str = *p;//从m+1个字符前移
+        str++;
+        p++;
+    }
+    for (int i = 0;i <= m;i++)
+    {
+        *str = ch[i];//末尾放入字符串ch
+        str++;
+    }
 }
 
 int main(void)
 {
     int m;
     char str[] = "ABCDEFG";
+
     printf("Enter m:\n");
     scanf("%d", &m);
     if (m >= 7)
@@ -36,6 +44,7 @@ int main(void)
     else
     {
         fun(str, m);
+        printf("%s", str);
     }
     return 0;
 }

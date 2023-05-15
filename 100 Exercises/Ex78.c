@@ -10,8 +10,7 @@ int main(void)
 {
     char str1[20] = "aabbccddee";
     char str2[20];
-    // printf("Enter a string:\n");
-    // gets(str1);
+
     fun(str1, str2);
     printf("%s", str2);
 

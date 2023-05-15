@@ -12,7 +12,7 @@ int fun(char* s, char* t)
     int len = strlen(s);
     for (i = 0; i < len; i++)
     {
-        if ((i % 2 == 0) && (s[i] % 2 == 0))
+        if ((i % 2 == 0) && (s[i] % 2 == 0))//下标为偶数、同时ASCII值也为偶数
         {
             t[j++] = s[i];
         }

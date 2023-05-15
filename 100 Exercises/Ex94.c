@@ -18,14 +18,14 @@ int main(void)
 
 char fun(char* s)
 {
-    int i = 0;
-    while (*s == '*')
+    char* p = s;
+    while (*p == '*')
     {
-        i++;
-        s++;
+        p++;
     }
-    if (i > 0)
+    for (int i = 0; *p != '\0'; i++)
     {
-        strcpy(s - i, s);
+        *(s++) = *(p++);
     }
+    *s = '\0';
 }

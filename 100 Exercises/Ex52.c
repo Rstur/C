@@ -21,7 +21,7 @@ void fun(char* str1, char* str2)
 {
     while (*str1)
     {
-        str1++;
+        str1++;//str1末尾
     }
     while (*str2)
     {

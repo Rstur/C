@@ -23,7 +23,7 @@ double fun(int m)
     double sum = 0.0;
     for (int i = 1; i <= m; i++)
     {
-        sum += log(i);
+        sum += log(i);//ln=log()
     }
     double s = 0.5 * sum;
     return s;

@@ -15,7 +15,7 @@ int main(void)
     int a[N];
     for (int i = 0; i < N; i++)
     {
-        a[i] = rand() % 120;
+        a[i] = rand() % 120;//随机范围1-119
         printf("%2d  ", a[i]);
     }
     int d[10];
@@ -37,7 +37,7 @@ void fun(int a[], int d[])
 {
     for (int i = 0; i < 11; i++)
     {
-        d[i] = 0;
+        d[i] = 0;//初始化11组数据为0
     }
     for (int i = 0; i < N; i++)
     {

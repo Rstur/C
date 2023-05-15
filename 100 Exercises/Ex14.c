@@ -10,12 +10,15 @@ float fun(int a[][N], int n)
     int i, j, k = 0, s = 0;
     for (i = 0; i < n; i++)
     {
-        for (j = 0; j < n; j++)
+        if (i == 0 || i == n - 1)
         {
-            if (i == 0 || i == n - 1 || j == 0 || j == n - 1)
+            for (j = 0; j < n; j += 1)
             {
                 s += a[i][j];
             }
+        }
+        else {
+            s += a[i][0] + a[i][n - 1];
         }
     }
     return s;
@@ -23,7 +26,7 @@ float fun(int a[][N], int n)
 
 int main(void)
 {
-    int a[N][N] = {0}, n = 0, i = 0, j = 0;
+    int a[N][N] = { 0 }, n = 0, i = 0, j = 0;
     int s;
     for (i = 0; i < N; i++)
     {

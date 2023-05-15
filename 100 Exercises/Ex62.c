@@ -29,7 +29,7 @@ int fun(char* s)
             count++;
             s++;
         }
-        s++;
+        s++;//末尾'\0'视作一个空格计算单词
     }
     return count;
 }

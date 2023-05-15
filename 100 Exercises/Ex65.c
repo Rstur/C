@@ -10,10 +10,7 @@ int fun();
 int main(void)
 {
     int i = 12, j = 34;
-    // printf("Enter first num:\n");
-    // scanf("%d", &i);
-    // printf("Enter second num:\n");
-    // scanf("%d", &j);
+
     printf("Combined:%d", fun(i, j));
 
     return 0;

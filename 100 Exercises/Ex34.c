@@ -12,17 +12,17 @@ struct student
 
 int fun(struct student s[], struct student h[])
 {
-    float maxscore = s[0].score;
+    float maxscore = s[0].score;//初始化最高分为第一个学生分数
     for (int i = 1;i < N;i++) {
         if (s[i].score > maxscore) {
-            maxscore = s[i].score;
+            maxscore = s[i].score; //找到最高分分值
         }
     }
     int count = 0;
     for (int i = 0;i < N;i++) {
         if (s[i].score == maxscore) {
             h[count] = s[i];
-            count++;
+            count++;//记录与最高分分值相等的个数
         }
     }
     printf("Hight score student:\n");

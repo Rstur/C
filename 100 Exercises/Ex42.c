@@ -11,7 +11,7 @@ void fun(int a[][N], int n)
     {
         for (j = 0; j < N; j++)
         {
-            if (j >= i)
+            if (j >= i)// 右上半
             {
                 a[i][j] *= n;
             }

@@ -11,7 +11,7 @@ int main(void)
 {
     char str[] = "***bc**j**d***";
     char* h = str;
-    char* p = h + sizeof(str) - 2;
+    char* p = h + sizeof(str) - 2;//字符串最后一个非空字符
 
     printf("Before: %s\n", str);
     fun(h, p);
@@ -28,20 +28,20 @@ void fun(char* h, char* p)
 
     while (*t == '*')
     {
-        t++;
+        t++;//定位第一个非*字符
     }
 
 
     while (*s == '*')
     {
-        s--;
+        s--;//定位倒数第一个非*字符
     }
 
 
     char* q = t;
     while (q <= s)
     {
-        if (*q == '*')
+        if (*q == '*')//在区间内非*字符前移
         {
             char* r = q;
             while (*r != '\0')

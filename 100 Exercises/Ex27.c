@@ -10,7 +10,7 @@ int fun(int* m, int* a)
     int n = 0;
     for (i = 0; i <= *m; i++)
     {
-        if (i % 7 == 0 || i % 11 == 0)
+        if (i % 7 == 0 || i % 11 == 0)//能被7或11整除
         {
             a[n] = i;
             n++;

@@ -21,7 +21,7 @@ void fun(char* str, char* ch)
     int i, j;
     for (i = j = 0;str[i] != '\0';i++)
     {
-        if (i % 2 != 0)
+        if (i % 2 != 0)//下标为偶数的字符
         {
             ch[j++] = str[i];
         }

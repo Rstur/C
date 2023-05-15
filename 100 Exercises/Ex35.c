@@ -5,18 +5,18 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void fun(char *str)
+void fun(char* str)
 {
     int i = 0;
-    char *p = str;
-    while (*p)
+    char* p = str;
+    while (*p)//遍历字符串
     {
         if (*p != ' ')
         {
             str[i] = *p;
             i++;
         }
-        p++;
+        p++;//遇到空格跳过
     }
     str[i] = '\0';
 }

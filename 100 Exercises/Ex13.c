@@ -6,6 +6,7 @@
 #include <stdio.h>
 #define M 4
 #define N 4
+
 void fun(int tt[M][N], int pp[N])
 {
     int min, i = 0, j = 0;

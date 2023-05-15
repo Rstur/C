@@ -24,10 +24,11 @@ int main(void)
     scanf("%s", name);
     int n = sizeof(s) / sizeof(s[0]);
     stu = fun(name, s, n);
-    if (stu)
-    {
-        printf("\nstudent: ");
-        printf(" %s %d\n", stu->id, stu->score);
+    if (strcmp(stu->id, "") != 0) {
+        printf("\nstudent: %s %d\n", stu->id, stu->score);
+    }
+    else {
+        printf("Student not found.\n");
     }
 }
 
@@ -40,4 +41,6 @@ struct student* fun(char name[], struct student s[], int n)
             return &s[i];
         }
     }
+    static struct student not_found = { "", -1 };//添加static 声明为静态储存类型
+    return &not_found;
 }

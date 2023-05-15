@@ -28,11 +28,6 @@ void fun(char* a, int n, int h, int e)
     char* p_begin = a + h;
     char* p_end = a + n - e - 1;
 
-    while (*p_begin == '*')
-    {
-        p_begin++;
-    }
-
     while (p_end > p_begin && *p_end == '*')
     {
         p_end--;

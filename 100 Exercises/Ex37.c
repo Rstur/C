@@ -12,20 +12,20 @@ struct student
     float average;
 };
 
-void fun(struct student *p)
+void fun(struct student* p)
 {
     double sum = 0;
     int i;
     for (i = 0; i < 8; i++)
     {
-        sum = sum + (*p).score[i];
+        sum += (*p).score[i];
     }
     (*p).average = sum / 8.0;
 }
 
 int main(void)
 {
-    struct student s = {"123456", 60, 70, 80, 90, 100, 60, 70, 80};
+    struct student s = { "123456", 60, 70, 80, 90, 100, 60, 70, 80 };
     int i;
     fun(&s);
 
