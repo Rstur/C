@@ -22,10 +22,10 @@ bool isPrime(int n)
     return true;
 }
 
-// 将大于整数m且紧靠m的k个素数存入xx所指的数组中
+
 void fun(int m, int k, int xx[])
 {
-    int count = 0; // 记录已找到的素数个数
+    int count = 0;
     int n = m + 1; // 从m的下一个数开始寻找素数
     while (count < k)
     { // 找到k个素数为止
@@ -38,14 +38,16 @@ void fun(int m, int k, int xx[])
     }
 }
 
-int main()
+int main(void)
 {
     int m = 10;
     int k = 5;
-    int xx[k];     // 定义长度为k的数组
+    int xx[5];     // 定义长度为k的数组
     fun(m, k, xx); // 调用fun函数
     for (int i = 0; i < k; i++)
     {
         printf("%d ", xx[i]);
     }
+
+    return 0;
 }

@@ -3,47 +3,58 @@
 形参h已指向字符串第一个字符，形参p已指向字符串中最后一个字母。在编写程序时，不得使用C语言提供的字符串函数   。
 */
 
-#include<stdio.h>
+#include <stdio.h>
 
-void fun();
+void fun(char* h, char* p);
 
 int main(void)
 {
-    char s[] = "***a*d*f**";
+    char str[] = "***bc**j**d***";
+    char* h = str;
+    char* p = h + sizeof(str) - 2;
 
-    char* p = s;
+    printf("Before: %s\n", str);
+    fun(h, p);
+    printf("After : %s\n", str);
 
-    while (*p != '\0')
-    {
-        p++;
-    }
-    p--;
-    fun(s, p);
-    printf("%s", s);
     return 0;
 }
 
 void fun(char* h, char* p)
 {
-    while (*h == '*')
+    char* t = h;
+    char* s = p;
+
+
+    while (*t == '*')
     {
-        h++;
+        t++;
     }
-    while (*p == '*')
+
+
+    while (*s == '*')
     {
-        p--;
+        s--;
     }
-    char* q = h;
-    while (q < p)
+
+
+    char* q = t;
+    while (q <= s)
     {
         if (*q == '*')
         {
-            char* w = q + 1;
-            while (w <= p && *w == '*')
+            char* r = q;
+            while (*r != '\0')
             {
-                w++;
+                *r = *(r + 1);
+                r++;
             }
-
+            *r = '\0';
+            s--;
+        }
+        else
+        {
+            q++;
         }
     }
 }

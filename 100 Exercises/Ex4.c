@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 
-void fun(char *tt, int pp[])
+void fun(char* tt, int pp[])
 {
     int i, len;
 
@@ -36,4 +36,6 @@ void main()
     fun(aa, bb);
     for (k = 0; k < 26; k++)
         printf("%d ", bb[k]);
+
+    return 0;
 }

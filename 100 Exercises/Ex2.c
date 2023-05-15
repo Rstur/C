@@ -4,12 +4,14 @@
 */
 #include <stdio.h>
 
-void fun(int *a, int *n)
+void fun(int* a, int* n)
 {
     int i, j = 0;
     for (i = 1; i <= 100; i++)
-        if (!(i % 7 == 0 && i % 11 == 0) && (i % 7 == 0 || i % 11 == 0))
+        if (!(i % 7 == 0 && i % 11 == 0) && (i % 7 == 0 || i % 11 == 0))//能被7或者11整除但不能同时被7和11整除
+        {
             a[j++] = i;
+        }
     *n = j;
 }
 
@@ -19,8 +21,7 @@ int main()
 
     fun(aa, &n);
     for (k = 0; k < n; k++)
-        if ((k + 1) % 10 == 0)
-            printf("\n");
-        else
-            printf("%5d", aa[k]);
+    {
+        printf("%5d", aa[k]);
+    }
 }

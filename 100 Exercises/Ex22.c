@@ -26,20 +26,6 @@ int main(void)
     node4.next = &node5;
 
     fun(&node1);
-    // struct linknode* p = &node1;
-    // int max = node1.score;
-    // while (p != NULL)
-    // {
-    //     if (p->score <= max)
-    //     {
-    //         p = p->next;
-    //     }
-    //     else
-    //     {
-    //         max = p->score;
-    //     }
-    // }
-    // printf("%d", max);
 
     return 0;
 }
