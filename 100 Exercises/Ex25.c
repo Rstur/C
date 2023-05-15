@@ -6,9 +6,9 @@
 #include <stdio.h>
 #include <string.h>
 
-int my_strlen(char *str)
+int my_strlen(char* str)
 {
-    char *p = str;
+    char* p = str;
 
     while (*p != '\0')
     {
@@ -17,7 +17,7 @@ int my_strlen(char *str)
     return p - str;
 }
 
-char *fun(char *str1, char *str2)
+char* fun(char* str1, char* str2)
 {
     int len1 = my_strlen(str1);
     int len2 = my_strlen(str2);

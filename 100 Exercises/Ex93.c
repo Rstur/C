@@ -23,10 +23,12 @@ int main(void)
     return 0;
 }
 
-double fun(int n, double x) {
+double fun(int n, double x)
+{
     double s = 1;
     double term = 1;
-    for (int i = 1; i <= n; i++) {
+    for (int i = 1; i <= n; i++)
+    {
         term *= x / i;
         s += term;
     }

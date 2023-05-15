@@ -24,10 +24,12 @@ int main(void)
     scanf("%s", name);
     int n = sizeof(s) / sizeof(s[0]);
     stu = fun(name, s, n);
-    if (strcmp(stu->id, "") != 0) {
+    if (strcmp(stu->id, "") != 0)
+    {
         printf("\nstudent: %s %d\n", stu->id, stu->score);
     }
-    else {
+    else
+    {
         printf("Student not found.\n");
     }
 }

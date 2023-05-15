@@ -21,11 +21,14 @@ int main(void)
     int d[10];
     fun(a, d);
 
-    for (int i = 0; i < 11; i++) {
-        if (i == 10) {
+    for (int i = 0; i < 11; i++)
+    {
+        if (i == 10)
+        {
             printf("\nNumber of people aged 100 or over: %d\n", d[i]);
         }
-        else {
+        else
+        {
             printf("\nNumber of people aged between %d and %d: %d\n", i * 10, i * 10 + 9, d[i]);
         }
     }

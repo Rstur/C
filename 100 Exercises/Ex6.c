@@ -19,12 +19,9 @@ void fun(char a[], char b[], int n)
     {
         for (int i = n; i < len; i++)
         {
-
             *(b + i) = *(b + i + 1); // 从删除位置开始往前覆盖
         }
-
         *(b + len) = '\0';
-
     }
 }
 

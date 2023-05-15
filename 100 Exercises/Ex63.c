@@ -20,7 +20,8 @@ int fun(int n)
     int i = 2;
     for (i = 2;i < n;i++)
     {
-        if (n % i == 0) {
+        if (n % i == 0)
+        {
             j += i;
         }
     }

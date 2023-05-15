@@ -12,8 +12,10 @@ void fun(char a[M][N])
     int i, j, t = 0;
     char ch[10];
 
-    for (j = 0;j < N;j++) {
-        for (i = 0;i < M;i++) {
+    for (j = 0;j < N;j++)
+    {
+        for (i = 0;i < M;i++)
+        {
             ch[t] = a[i][j];
             t++;
         }
@@ -27,7 +29,8 @@ int main(void)
     char a[M][N] = { {'a','b','c'},{'d','e','f'},{'g','h','i'} };
 
     printf("数组中的元素：\n");
-    for (int i = 0;i < M;i++) {
+    for (int i = 0;i < M;i++)
+    {
         for (int j = 0; j < N; j++)
         {
             printf("%2c", a[i][j]);

@@ -14,7 +14,8 @@ int main(void)
     char b[10];
 
     printf("a:\n");
-    for (int i = 0;i < M;i++) {
+    for (int i = 0;i < M;i++)
+    {
         for (int j = 0; j < N; j++)
         {
             printf("%2c", a[i][j]);
@@ -31,8 +32,10 @@ int main(void)
 void fun(char a[M][N], char* b)
 {
     int i, j;
-    for (j = 0;j < N;j++) {
-        for (i = 0;i < M;i++) {
+    for (j = 0;j < N;j++)
+    {
+        for (i = 0;i < M;i++)
+        {
             *b = a[i][j];
             b++;
         }

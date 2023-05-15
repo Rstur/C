@@ -17,7 +17,8 @@ float fun(int a[][N], int n)
                 s += a[i][j];
             }
         }
-        else {
+        else
+        {
             s += a[i][0] + a[i][n - 1];
         }
     }

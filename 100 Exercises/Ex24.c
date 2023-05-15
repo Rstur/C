@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-int fun(char *str)
+int fun(char* str)
 {
     int i = 0;
     while (*str != '\0')

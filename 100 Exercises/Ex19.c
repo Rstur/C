@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void fun(char *s, char d)
+void fun(char* s, char d)
 {
     int j = 0;
     for (int i = 0; s[i] != '\0'; i++)

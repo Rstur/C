@@ -13,20 +13,25 @@ struct student
 int fun(struct student s[], struct student h[])
 {
     float maxscore = s[0].score;//初始化最高分为第一个学生分数
-    for (int i = 1;i < N;i++) {
-        if (s[i].score > maxscore) {
+    for (int i = 1;i < N;i++)
+    {
+        if (s[i].score > maxscore)
+        {
             maxscore = s[i].score; //找到最高分分值
         }
     }
     int count = 0;
-    for (int i = 0;i < N;i++) {
-        if (s[i].score == maxscore) {
+    for (int i = 0;i < N;i++)
+    {
+        if (s[i].score == maxscore)
+        {
             h[count] = s[i];
             count++;//记录与最高分分值相等的个数
         }
     }
     printf("Hight score student:\n");
-    for (int i = 0;i < count;i++) {
+    for (int i = 0;i < count;i++)
+    {
         printf("Name:%s,Score:%d\n", h[i].name, h[i].score);
     }
 
@@ -37,7 +42,8 @@ int main(void)
 {
     struct student s[N] = { {"A",60},{"B",80},{"C",90},{"D",85},{"E",90} };
     int i = 0;
-    for (i = 0;i < N;i++) {
+    for (i = 0;i < N;i++)
+    {
         printf("Name:%s,Score:%d \n", s[i].name, s[i].score);
     }
     struct student h[N];

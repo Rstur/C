@@ -9,8 +9,10 @@ char* fun(char(*str)[20], int num)
 {
     char* max;
     max = str[0];
-    for (int i = 0;i < num;i++) {
-        if (strlen(max) < strlen(str[i])) {
+    for (int i = 0;i < num;i++)
+    {
+        if (strlen(max) < strlen(str[i]))
+        {
             max = str[i];
         }
     }
@@ -30,7 +32,8 @@ int main(void)
         k++;
     }
     printf("Strings have entered:\n");
-    for (int i = 0;i < k;i++) {
+    for (int i = 0;i < k;i++)
+    {
         printf("%s ", str[i]);
     }
     max = fun(str, k);

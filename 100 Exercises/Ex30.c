@@ -26,7 +26,7 @@ int fun(int arr[2][M])
 int main(void)
 {
     int max = 0;
-    int arr[2][M] = {0}, i = 0, j = 0;
+    int arr[2][M] = { 0 }, i = 0, j = 0;
     for (i = 0; i < 2; i++)
     {
         for (j = 0; j < M; j++)

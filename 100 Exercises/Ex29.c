@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void fun(char *ch)
+void fun(char* ch)
 {
     int len;
     len = strlen(ch);

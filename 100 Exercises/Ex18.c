@@ -21,7 +21,7 @@ int fun(int a[N][N])
 
 int main(void)
 {
-    int a[N][N] = {0}, n = 0, i = 0, j = 0;
+    int a[N][N] = { 0 }, n = 0, i = 0, j = 0;
     for (i = 0; i < N; i++)
     {
         for (j = 0; j < N; j++)
