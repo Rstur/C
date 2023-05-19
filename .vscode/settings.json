@@ -2,6 +2,11 @@
   "files.associations": {
     "*.c": "c",
     "stdbool.h": "c",
-    "string.h": "c"
+    "string.h": "c",
+    "algorithm": "c",
+    "iterator": "c",
+    "xhash": "c",
+    "xtree": "c",
+    "xutility": "c"
   }
 }

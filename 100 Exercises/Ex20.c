@@ -8,7 +8,7 @@
 int fun(int lim, int* aa)
 {
     int count = 0, i, j;
-    for (i = 2; i < lim; i++)
+    for (i = 2; i <= lim; i++)
     {
         for (j = 2; j < i; j++)
         {

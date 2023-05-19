@@ -3,14 +3,14 @@
 */
 
 #include <stdio.h>
-#include <string.h>
+#include<ctype.h>
 
 void fun(char* s, char d)
 {
     int j = 0;
     for (int i = 0; s[i] != '\0'; i++)
     {
-        if (s[i] != d && s[i] != d - ('a' - 'A') && s[i] != d + ('a' - 'A'))
+        if (s[i] != d && s[i] != toupper(d) && s[i] != tolower(d))
         {
             s[j++] = s[i];
         }
@@ -25,7 +25,7 @@ int main(void)
     printf("Enter some words:\n");
     scanf("%s", s);
     printf("Enter a letter:\n");
-    scanf("%c", &d);
+    scanf(" %c", &d); //%c前添加空格，忽略上一次输入的换行符
 
     fun(s, d);
     printf("%s", s);

@@ -32,10 +32,10 @@ void fun(struct student s[])
     {
         printf("Name:%s,Score:%d\n", s[i].name, s[i].score);
     }
-
 }
 
-int main(void) {
+int main(void)
+{
     struct student s[N] = { {"a",60},{"b",70},{"c",80},{"d",90},{"e",100},{"f",50} };
     for (int i = 0; i < N; i++)
     {

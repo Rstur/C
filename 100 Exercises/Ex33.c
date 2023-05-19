@@ -8,27 +8,36 @@ void fun();
 
 int main(void)
 {
-    char str[] = "a**bc***d**";
-    fun(str);
+    char str[] = "a**bc**d***";
+    int n = 2;
+    fun(str, n);
     printf("%s", str);
 
     return 0;
 }
 
-void fun(char* a)
+void fun(char* a, int n)
 {
-    int i = 0;
+    int count = 0;
     char* p = a;
 
     while (*p)
     {
-        i++;
+
         p++;
     }
-    i--;//定位字符串非空末尾
+    p--;
 
-    for (;a[i] == '*';i--)
+    while (*p == '*')
     {
-        a[i] = '\0';
+        p--;
+        count++;
+    }
+    p++;
+
+    if (count > n)
+    {
+        p = p + count - n;
+        *p = '\0';
     }
 }

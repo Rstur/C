@@ -11,7 +11,7 @@ char fun();
 int main(void)
 {
     char s[] = "***a*d*f**";
-    int n = 4;
+    int n = 2;
     printf("%d\n", strlen(s));
     fun(s, n);
     printf("%s", s);
