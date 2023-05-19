@@ -9,9 +9,6 @@ void fun(char* tt, int pp[])
 {
     int i, len;
 
-    // 将pp数组中的所有元素初始化为0
-    memset(pp, 0, sizeof(int) * 26);
-
     // 统计字符串中每个字母出现的次数
     len = strlen(tt);
     for (i = 0; i < len; i++)
@@ -27,10 +24,10 @@ void fun(char* tt, int pp[])
     }
 }
 
-void main()
+int main()
 {
     char aa[1000];
-    int bb[26], k;
+    int bb[26] = { 0 }, k;
     printf("\nPlease enter a char string : ");
     scanf("%s", aa);
     fun(aa, bb);
