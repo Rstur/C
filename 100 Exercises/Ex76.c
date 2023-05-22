@@ -11,10 +11,9 @@ int main(void)
     double x = 0.9;
     double S = fun(x);
     printf("S(%f) = %f\n", x, S);
+
     return 0;
 }
-
-#include <stdio.h>
 
 double fun(double x)
 {
