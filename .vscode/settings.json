@@ -7,6 +7,7 @@
     "iterator": "c",
     "xhash": "c",
     "xtree": "c",
-    "xutility": "c"
+    "xutility": "c",
+    "stdio.h": "c"
   }
 }

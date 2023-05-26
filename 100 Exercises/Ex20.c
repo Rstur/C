@@ -3,26 +3,56 @@
 */
 
 #include <stdio.h>
+// #include <stdbool.h>
 #define MAX 100
+#include "isPrime.h"
 
+
+// bool isPrime(int num)
+// {
+//     if (num <= 1)
+//     {
+//         return false;
+//     }
+//     for (int i = 2; i <= num / 2; i++)
+//     {
+//         if (num % i == 0)
+//         {
+//             return false;
+//         }
+//     }
+//     return true;
+// }
 int fun(int lim, int* aa)
 {
-    int count = 0, i, j;
-    for (i = 2; i <= lim; i++)
+    int count = 0, i;
+    for (i = 2;i <= lim;i++)
     {
-        for (j = 2; j < i; j++)
+        if (isPrime(i))
         {
-            if (i % j == 0)
-                break;
-        }
-        if (j == i)
-        {
-            aa[count] = i;
-            count += 1;
+            aa[count++] = i;
         }
     }
     return count;
 }
+// int fun(int lim, int* aa)
+// {
+//     int count = 0, i, j;
+//     for (i = 2; i <= lim; i++)
+//     {
+//         for (j = 2; j < i; j++)
+//         {
+//             if (i % j == 0)
+//                 break;
+//         }
+//         if (j == i)
+//         {
+//             aa[count] = i;
+//             count += 1;
+//         }
+//     }
+//     return count;
+// }
 
 int main(void)
 {

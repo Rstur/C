@@ -40,7 +40,7 @@ void fun(int m, int k, int xx[])
 
 int main(void)
 {
-    int m = 10;
+    int m = 1;
     int k = 5;
     int xx[5];     // 定义长度为k的数组
     fun(m, k, xx); // 调用fun函数

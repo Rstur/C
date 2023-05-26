@@ -8,9 +8,9 @@ float fun(double h)
 {
     int temp = (int)(h * 100 + 0.5);
 
-    h = temp / 100.0f;
+    double ret = temp / 100.0f;
 
-    return h;
+    return ret;
 }
 
 int main(void)

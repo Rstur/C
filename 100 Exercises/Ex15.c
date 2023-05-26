@@ -7,16 +7,16 @@
 
 unsigned fun(unsigned w)
 {
-    unsigned t, s = 0, s1 = 1, p = 0;
+    unsigned t, value = 0, level = 1, unit = 0;
     t = w;
     while (t > 10)
     {
-        p = t % 10;
-        s += p * s1;
-        s1 *= 10;
-        t = t / 10;
+        unit = t % 10;//取个位
+        value += unit * level;//加入value
+        level *= 10;//增加一个数量级
+        t = t / 10;//去掉个位
     }
-    return s;
+    return value;
 }
 
 int main(void)

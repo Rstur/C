@@ -10,7 +10,7 @@ void fun(char* s, char d)
     int j = 0;
     for (int i = 0; s[i] != '\0'; i++)
     {
-        if (s[i] != d && s[i] != toupper(d) && s[i] != tolower(d))
+        if (s[i] != d)
         {
             s[j++] = s[i];
         }
